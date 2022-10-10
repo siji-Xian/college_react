@@ -1,0 +1,53 @@
+.resultsListPaper {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 28px 20px 20px 20px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 20px;
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .info {
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e4e4e4;
+      margin-bottom: 10px;
+    }
+    .page {
+      width: 100%;
+      overflow-y: auto;
+      background-color: #f0f2f5;
+      padding: 15px 15px 35px 15px;
+      height: calc(100vh - 48px - 68px - 20px - 40px);
+    }
+    .back {
+      position: absolute;
+      height: 28px;
+      line-height: 28px;
+      top: 0;
+      left: 20px;
+      cursor: pointer;
+    }
+    .examinationPaperButtom {
+      width: calc(100% - 40px);
+      background-color: #fff;
+      position: absolute;
+      bottom: 20px;
+      height: 24px;
+      right: 20px;
+      box-sizing: border-box;
+      padding: 0 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

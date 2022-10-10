@@ -1,0 +1,70 @@
+.showPdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+  background-color: #fff;
+  .VideoBox {
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    & * {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .videoInfos {
+    .commentDelBox {
+      &:hover {
+        .commentDel {
+          display: block;
+        }
+      }
+    }
+    .ant-comment-inner {
+      .commentDel {
+        display: none;
+      }
+      &:hover {
+        .commentDel {
+          display: block;
+        }
+      }
+    }
+    width: 100%;
+    .videoTitle {
+      position: relative;
+      margin-left: 15px;
+      color: #5b5b5b;
+      &::before {
+        content: '';
+        left: -15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 4px;
+        height: 14px;
+        margin-right: 10px;
+        background-color: #448ef7;
+      }
+    }
+    .videoContent {
+      margin-left: 15px;
+      font-size: 12px;
+      color: #7f7e7e;
+    }
+  }
+}
+.barrageOrbitalItem {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 0 10px;
+  margin: 0 10px;
+  font-size: 12px;
+  color: #fff;
+}

@@ -1,0 +1,33 @@
+.repository {
+  box-sizing: border-box;
+  padding: 20px 20px 15px 20px;
+  // min-height: calc(100vh - 48px);
+  width: 100%;
+  height: calc(100%);
+  .title {
+    position: relative;
+    width: calc(100%);
+    background-color: #fff;
+    // margin-bottom: 20px;
+    // display: flex;
+    // align-items: center;
+    border-radius: 5px;
+    padding: 0 20px 10px 20px;
+    // justify-content: space-between;
+    .titleName {
+      color: #448ef7;
+      font-weight: bold;
+    }
+    .tip {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+  .content {
+    .box {
+      height: calc(100vh - 48px - 148px - 26px);
+      overflow-y: auto;
+    }
+  }
+}

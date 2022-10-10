@@ -1,0 +1,68 @@
+.examinationPaper {
+  box-sizing: border-box;
+  // padding: 0 260px;
+  padding: 68px 20px 20px 20px;
+  .examinationPaperTimer {
+    width: 100%;
+    top: 48px;
+    left: 0;
+    position: fixed;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    z-index: 2;
+    height: 48px;
+    align-items: center;
+    .timer {
+      display: flex;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 20px;
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .info {
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e4e4e4;
+      margin-bottom: 10px;
+    }
+    .page {
+      width: 100%;
+      overflow-y: auto;
+      background-color: #f0f2f5;
+      padding: 15px;
+      height: calc(100vh - 48px - 68px - 20px - 80px);
+      .examinationPaperButtom {
+        width: calc(100% - 40px);
+        background-color: #fff;
+        position: fixed;
+        bottom: 20px;
+        height: 48px;
+        left: 20px;
+        box-sizing: border-box;
+        padding: 0 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  // .page{
+  //     width: 100%;
+  //     background-color: #ffffff;
+  //     min-height: 200px;
+  //     padding: 20px;
+  // }
+}
