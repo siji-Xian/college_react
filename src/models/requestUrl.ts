@@ -22,7 +22,7 @@ export interface IndexModelType {
 const IndexModel: IndexModelType = {
   namespace: 'requestUrl',
   state: {
-    url: 'api接口地址',
+    url: 'http://college.yinlimedia.com:8080/',
   },
   // effects: {
   //   *login({ payload }, { call, put }) {

@@ -26,7 +26,7 @@ const { Search } = Input;
 
 function Index(props: any) {
   const [selectedTags, setSelectedTags] = useState<any>(['全部']);
-  const [selectedTagsId, setSelectedTagsId] = useState<any>(3);
+  const [selectedTagsId, setSelectedTagsId] = useState<number | null>();
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [twoSelectedTags, setTwoSelectedTags] = useState<any>(['全部']);
   const [twoLevelTagArr, setTwoLevelTagArr] = useState<any>([]);
@@ -71,6 +71,7 @@ function Index(props: any) {
     const res = await api.getVideoAppTags();
     if (res?.err_code === 0) {
       setT(res.data);
+      setSelectedTagsId(res.data[0].id);
     }
   };
 
@@ -105,7 +106,7 @@ function Index(props: any) {
 
   useEffect(() => {
     getVideoAppTage();
-    loadMoreData();
+    // loadMoreData();
   }, []);
 
   useEffect(() => {

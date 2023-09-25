@@ -68,24 +68,19 @@ function Index(props: any) {
 
   //获取筛选栏
   const getVideoAppTage = async () => {
-    // const res = await api.getVideoAppTags();
-    // if (res?.err_code === 0) {
-    //   console.log(res);
-    //   setT(res.data);
-    // }
-    setT([
-      {
-        id: 1,
-        name: '优秀案例',
-      },
-    ]);
+    const res = await api.getVideoAppTags();
+    if (res?.err_code === 0) {
+      console.log(res);
+      setT(res.data);
+    }
+    // setT([
+    //   {
+    //     id: 1,
+    //     name: '优秀案例',
+    //   },
+    // ]);
   };
 
-  // const soltChange = ({ target: { value } }: RadioChangeEvent) => {
-  //   // console.log(e);
-  //   setSortValues(value);
-  //   setSolt((p: any) => (p = value));
-  // };
   const soltChange = (value: any) => {
     // console.log(e);
     setSortValues(value);
@@ -95,7 +90,6 @@ function Index(props: any) {
   //获取视频列表
   const getVideoAppGetVideo = async (e: any, page: number) => {
     let data = {
-      // category_id: e,
       status: 2,
       page,
       num: 9,
@@ -144,11 +138,6 @@ function Index(props: any) {
   useEffect(() => {
     loadPage();
   }, [selectedTagsId, solt, searchText]);
-
-  const optionsWithDisabled = [
-    { label: '最新发布', value: '-c_time' },
-    { label: '最多评论', value: '-comment' },
-  ];
 
   const onSearch = (e: any) => {
     setSearchText(() => e);
